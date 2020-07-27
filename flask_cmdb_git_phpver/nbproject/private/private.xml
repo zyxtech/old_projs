@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/proc/php/learnlaravel5/resources/assets/sass/app.scss</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/views/home.blade.old.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/views/auth/register.blade.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/views/welcome.blade.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/views/layouts/custom.blade.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Providers/AuthServiceProvider.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/bootstrap/app.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/views/auth/login.blade.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Http/Controllers/TestController.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Http/Controllers/HomeController.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Http/Controllers/Auth/ForgotPasswordController.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/views/test/create.blade.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Http/Controllers/Controller.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/User.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/database/migrations/2018_04_21_041906_create_articles_table.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/composer.json</file>
+            <file>file:/C:/proc/php/learnlaravel5/public/index.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/views/layouts/app.blade.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/config/app.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/assets/sass/_variables.scss</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Forms/TestForm.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Http/Controllers/Auth/ResetPasswordController.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Http/Controllers/Auth/RegisterController.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/routes/web.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/resources/views/home.blade.php</file>
+            <file>file:/C:/proc/php/learnlaravel5/app/Http/Controllers/Auth/LoginController.php</file>
+        </group>
+    </open-files>
+</project-private>

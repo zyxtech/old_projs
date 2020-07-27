@@ -1,0 +1,7 @@
+#autoNewLine {
+    word-wrap: break-word;
+    word-break: normal;
+}
+.sidebar .nav-second-level li a {
+  padding-left: 37px;
+}
