@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h2>表单格式1</h2>
+        <form method="POST" action="/demos/flask_wtf2">
+
+            {{ form.hidden_tag() }}
+            {{ form.name.label }} {{ form.name(size=3) }}
+            {{ form.ip.label }} {{ form.ip }}
+            {{ form.username.label }}{{ form.username }}
+            {{ form.businessdepart.label }}{{ form.businessdepart }}
+            <input type="submit" value="提交">
+        </form>
+
+    </div>
+    <div class="page-header">
+    <h2>表单格式2</h2>
+    {{ wtf.quick_form(form) }}
+    </div>
+    <div class="page-header">
+    <h2>表单格式3</h2>
+    <form class="form form-horizontal" method="post" role="form">
+        {{ form.hidden_tag() }}
+        {{ wtf.form_errors(form, hiddens="only") }}
+        {{ wtf.form_field(form.name) }}
+        {{ wtf.form_field(form.ip) }}
+        {{ wtf.form_field(form.username) }}
+        {{ wtf.form_field(form.businessdepart) }}
+        <input type="submit" value="提交">
+    </form>
+    </div>
+{% endblock %}

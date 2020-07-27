@@ -1,0 +1,70 @@
+
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <!-- DataTables CSS -->
+    <link rel="stylesheet"
+      href="{{url_for('static', filename='DataTables/DataTables-1.10.16/css/dataTables.bootstrap.css')}}">
+    <link rel="stylesheet"
+      href="{{url_for('static', filename='DataTables/Buttons-1.5.0/css/buttons.bootstrap.css')}}">
+    <link rel="stylesheet"
+      href="{{url_for('static', filename='DataTables/Select-1.2.4/css/select.bootstrap.css')}}">
+    <link rel="stylesheet"
+      href="{{url_for('static', filename='DataTables/Editor-2017-12-26-1.7.0/css/editor.bootstrap.css')}}">
+{% endblock %}
+
+{% block page_content %}
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <!-- DataTables JavaScript -->
+
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/DataTables-1.10.16/js/jquery.dataTables.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/DataTables-1.10.16/js/dataTables.bootstrap.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/Buttons-1.5.0/js/dataTables.buttons.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/Buttons-1.5.0/js/buttons.bootstrap.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/Select-1.2.4/js/dataTables.select.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/Editor-2017-12-26-1.7.0/js/dataTables.bootstrap.min.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/Editor-2017-12-26-1.7.0/js/editor.bootstrap.min.js')}}"></script>
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>
+{% endblock %}

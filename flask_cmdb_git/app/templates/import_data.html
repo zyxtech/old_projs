@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Flasky{% endblock %}
+
+
+{% block page_content %}
+    <div class="page-header">
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                {% for message in get_flashed_messages() %}
+                {% if message!='添加成功' %}
+                <div class="alert alert-warning" style="color: red;">
+                    {% if message!=None and message!='' %}
+                    {{ message }}
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% endfor %}
+                <form action="" method="post"  enctype=multipart/form-data >
+
+                <div class="form-group "><label class="control-label" >上传文件</label>
+                    <!--<input class="form-control" id="file" name="file" type="text" value="">-->
+                    <input type="file" name="file" >
+
+                </div>
+                    <input class="btn btn-default" id="submit" name="submit" type="submit" value="提交">
+                </form>
+
+                <!--<div class="panel panel-primary">-->
+                    <!--<div class="panel-heading">-->
+                        <!--导入数据-->
+                    <!--</div>-->
+                    <!--<div class="panel-body">-->
+                        <!--<div class="form-group has-feedback">-->
+							<!--&lt;!&ndash;<label class="col-sm-3 control-label">模板文件：</label>&ndash;&gt;-->
+							<!--<div class="col-sm-9">-->
+								<!--<input type="file" value="" id="file_id">-->
+								<!--<p>说明：此处请您上传excle数据表</p>-->
+								<!--<input type="hidden" id="update" value="{{update}}">-->
+							<!--</div>-->
+						<!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="panel-footer">-->
+                        <!--<button id="submit">提交</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!-- /.col-lg-4 -->
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <!-- DataTables JavaScript -->
+
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/DataTables-1.10.16/js/dataTables.bootstrap.min.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/Responsive-2.2.1/js/dataTables.responsive.js')}}"></script>
+
+
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/Buttons-1.5.0/js/dataTables.buttons.min.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/JSZip-2.5.0/jszip.min.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/pdfmake-0.1.32/pdfmake.min.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/pdfmake-0.1.32/vfs_fonts.js')}}"></script>
+    <script type="text/javascript"
+            src="{{url_for('static', filename='DataTables/Buttons-1.5.0/js/buttons.html5.js')}}"></script>
+
+
+{% endblock %}
+

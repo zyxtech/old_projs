@@ -1,0 +1,164 @@
+https://app.quickdatabasediagrams.com/#/schema/cpGOfrzBf0uaDXl03G4YBw
+
+
+# Modify the code to update the DB schema diagram.
+# To reset the sample schema, replace everything with
+# two dots ('..' - without quotes).
+
+IDC
+-
+ID PK int
+Position string
+Type int FK >- IDC_TYPE.ID
+Address string
+ServerCabinet int
+
+IDC_TYPE
+-
+ID PK int
+Desc string
+
+NetworkDevice
+-
+ID PK int
+Position string
+DeviceType int FK >- NetworkDeviceModel.ID
+SerialNO string
+DesignedPower string
+PurchaseTime date
+WarrantyTime string
+NormalPort int
+OpticalPort int
+Traffic string
+OpticalModule string
+CabinetID FK >- ServerCabinet.ID
+Comment string
+
+SecurityDevice
+-
+ID PK int
+Position string
+DeviceType int FK >- SecurityDeviceModel.ID
+SerialNO string
+DesignedPower string
+PurchaseTime date
+WarrantyTime string
+Traffic string
+CryDecSpeed string
+PortNum int
+CabinetID FK >- ServerCabinet.ID
+Comment string
+
+SERVER
+-
+ID PK int
+Position string
+DeviceType int FK >- ServrDeviceModel.ID
+SerialNO string
+DesignedPower string
+PurchaseTime date
+WarrantyTime string
+Memory string
+MemoryModel int FK >- MemoryType.ID
+CPUModel int FK >- CPUType.ID
+CPUNum int
+DiskNum int
+NetworkAdapter string
+CabinetID FK >- ServerCabinet.ID
+Comment string
+Ip string
+BusinessDepart string
+
+DISK
+-
+ID PK int
+Size string
+Position int
+RaidID int FK >- RAID.ID
+ServerId int FK >- SERVER.ID
+
+RAID
+-
+ID PK int
+Type string
+ServerId int FK >- SERVER.ID
+
+
+ServrDeviceModel
+-
+ID PK int
+Manufacturer string
+DeviceName string
+MemeorySlot int
+DiskSlot int
+Model string
+
+SecurityDeviceModel
+-
+ID PK int
+Manufacturer string
+DeviceName string
+
+NetworkDeviceModel
+-
+ID PK int
+Manufacturer string
+DeviceName string
+
+ServerCabinet
+-
+ID PK int
+DesignedPower string
+IDC int FK >- IDC.ID
+Name string
+Comment string
+
+CPUType
+-
+ID PK int
+Model string
+Frequency string
+CoreNum int
+
+MemoryType
+-
+ID PK int
+Frequency string
+GrainSize string
+GrainNum string
+Size string
+
+[settings]
+Position 5 0
+Zoom 110
+DefaultFieldType int
+CaseSensitive on
+
+[layout]
+
+IDC 63 510
+
+IDC_TYPE 258 560
+
+SERVER 261 16
+
+ServrDeviceModel 556 386
+
+DISK 59 165
+
+RAID 38 21
+
+NetworkDevice 994 33
+
+SecurityDevice 672 7
+
+ServerCabinet 364 452
+
+CPUType 42 348
+
+
+SecurityDeviceModel 806 411
+
+NetworkDeviceModel 955 579
+
+MemoryType 508 40

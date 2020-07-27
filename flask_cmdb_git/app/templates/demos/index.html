@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% block title %}Flasky{% endblock %}
+
+
+{% block page_content %}
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Demos</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        demo /demos/datatables
+                    </div>
+                    <div class="panel-body">
+                        <p>基本页面跳转，显示datatables示例页面</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/datatables"> GO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        demo /demos/ajax_add_numbers
+                    </div>
+                    <div class="panel-body">
+                        <p>通过url调用ajax服务器端函数，url传参数a和b，传回a+b的和</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/ajax_add_numbers?a=2&b=3">GO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        demo /demos/ajax_list
+                    </div>
+                    <div class="panel-body">
+                        <p>通过url调用ajax服务器端函数，返回一个list</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/ajax_list">GO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        demo /demos/datatables_ajax
+                    </div>
+                    <div class="panel-body">
+                        <p>跳转到/demos/datatables_ajax页面，该页面中的datatables通过ajax获取/demos/datatables_ajax_jsondata的数据</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/datatables_ajax">GO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        demo /demos/datatables_ajax_jsondata
+                    </div>
+                    <div class="panel-body">
+                        <p>服务器端函数，返回datatables的的数据</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/datatables_ajax_jsondata">GO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        demo /demos/flask_wtf
+                    </div>
+                    <div class="panel-body">
+                        <p>Flask web开发中的示例，页面表单为wtforms表单，imput框中的数据传输到服务器端后放入session并显示到页面</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/flask_wtf">GO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        demo /demos/flask_wtf2
+                    </div>
+                    <div class="panel-body">
+                        <p>不同编写方式的form表单,具体查看templates/demos/flask_wtf2.html</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/flask_wtf2">GO</a>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        demo /demos/demouser
+                    </div>
+                    <div class="panel-body">
+                        <p>demouser Model的编辑页面，向数据库提交数据时通过form.populate_obj(item)把form数据转换到demouser的model</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/demouser">GO</a>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-red">
+                    <div class="panel-heading">
+                        demo /demos/demouser_index
+                    </div>
+                    <div class="panel-body">
+                        <p>demouser Model的列表页,可以修改，删除对应内容，修改按钮跳转时，服务器端通过form = DemoUser2Form(obj=item)初始化表格
+                           表单格式使用ModelForm(BaseModelForm)来通过model生成表单，不需要手工定义form类
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/demouser_index">GO</a>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        demo /demos/demopost_index
+                    </div>
+                    <div class="panel-body">
+                        <p>Demo233
+                        </p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/demos/demopost_index">GO</a>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        demo todo
+                    </div>
+                    <div class="panel-body">
+                        <p>demo todo</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="#">GO</a>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel panel-default">
+                    <div class="panel-heading">
+                        demo todo
+                    </div>
+                    <div class="panel-body">
+                        <p>demo todo</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="#">GO</a>
+                    </div>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Collapsible Accordion Panel Group
+                    </div>
+                    <!-- .panel-heading -->
+                    <div class="panel-body">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible
+                                            Group Item #1</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible
+                                            Group Item #2</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible
+                                            Group Item #3</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+
+    </div>
+
+
+{% endblock %}
+

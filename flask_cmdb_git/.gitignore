@@ -1,0 +1,10 @@
+### Python artifacts
+*.pyc
+venv/
+build
+migrations/
+.idea/
+config.py
+*.log
+log
+uploads/*
